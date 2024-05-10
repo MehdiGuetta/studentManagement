@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <form>
+        <legend>Add student</legend>
+        <label for="first-name">First Name:</label><br>
+        <input type="text" id="first-name" placeholder="First Name" required>
+        <label for="last-name">Last Name:</label><br>
+        <input type="text" id="last-name" required placeholder="Last Name">
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" placeholder="Age">
+        <span>Age must between 14 and 24 years.</span>
+        <label for="gender">Gender:</label><br>
+        <select id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <label for="date">Date:</label><br>
+        <input type="date" id="date">
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" placeholder="Email">
+        <label for="address">Address:</label><br>
+        <textarea id="address" placeholder="Address"></textarea>
+        <Button id="submit">Add</Button>
+    </form>
+
+    <div class="section">
+        <h1>List of students</h1>
+        <table id="table">
+            <tr>
+                <th>F. Name</th>
+                <th>L. Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Birth date</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Actions</th>
+            </tr>
+            <!-- <tr>
+                <td>Mehdi</td>
+                <td>El Bettioui</td>
+                <td>21</td>
+                <td>Male</td>
+                <td>04/06/2002</td>
+                <td>mehdi.elbettioui1@gmail.com</td>
+                <td>Salé</td>
+                <td>
+                    <i id="edit-icon" class="fa-solid fa-pen-to-square"></i>
+                    <i id="delete-icon" class="fa-solid fa-trash"></i>
+                </td>
+            </tr> -->
+            
+        </table>
+    </div>
+
+
+
+    <script src="assets/script.js"></script>
+</body>
+</html>

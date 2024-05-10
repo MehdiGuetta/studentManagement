@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    background-color: #eee;
+}
+
+form{
+    width: 26%;
+    float: left;
+    height: auto;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
+    background-color: #fff;
+    margin: 1%;
+}
+
+.section{
+    width: 71%;
+    float: right;
+    height: 500px auto;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
+    background-color: #fff;
+    margin: 1% 1% 1% 0;
+}
+
+form legend,.section h1{
+    color: #000;
+    font-size: 25px;
+    margin: 20px 0 20px 20px;
+    font-weight: 700;
+}
+
+form label{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+form input{
+    margin-left: 20px;
+    width: 90%;
+    border: 1px solid #787878;
+    outline: none;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+form span{
+    margin-left: 20px;
+    color: red;
+    margin-bottom: 15px;
+    display: block;
+}
+
+form select{
+    margin-left: 20px;
+    width: 90%;
+    border: 1px solid #787878;
+    outline: none;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+form textarea{
+    margin-left: 20px;
+    width: 90%;
+    border: 1px solid #787878;
+    outline: none;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+form button{
+    margin-left: 20px;
+    width: 90%;
+    border: 1px solid #787878;
+    outline: none;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+table{
+    box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.2);
+    margin: 20px;
+    min-width: 97%;
+    border-radius: 5px;
+    border-collapse: collapse;
+}
+th{
+    background-color: #eee;
+}
+
+th, td{
+    padding: 1%;
+    text-wrap: wrap;
+    text-align: center;
+}
+
+td i{
+    padding: 10px;
+    cursor: pointer;
+    color: #07ca07;
+    font-size: 20px;
+}
+td i:nth-child(2){
+    color: red;
+}

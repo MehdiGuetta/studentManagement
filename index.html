@@ -8,60 +8,109 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-    <form>
-        <legend>Add student</legend>
-        <label for="first-name">First Name:</label><br>
-        <input type="text" id="first-name" placeholder="First Name" required>
-        <label for="last-name">Last Name:</label><br>
-        <input type="text" id="last-name" required placeholder="Last Name">
-        <label for="age">Age:</label><br>
-        <input type="number" id="age" placeholder="Age">
-        <span>Age must between 14 and 24 years.</span>
-        <label for="gender">Gender:</label><br>
-        <select id="gender">
+    <form class="my-form">
+        <legend class="form-legend">Add student</legend>
+
+        <label class="form-lb" for="first-name">First Name:</label><br>
+        <input class="form-input" type="text" id="first-name" placeholder="First Name" required>
+
+        <label class="form-lb" for="last-name">Last Name:</label><br>
+        <input class="form-input" type="text" id="last-name" required placeholder="Last Name">
+
+        <label class="form-lb" for="age">Age:</label><br>
+        <input class="form-input" type="number" id="age" placeholder="Age">
+
+        <span class="form-span">Age must between 14 and 24 years.</span>
+
+        <label class="form-lb" for="gender">Gender:</label><br>
+        <select class="form-select" id="gender">
             <option value="Male">Male</option>
             <option value="Female">Female</option>
         </select>
-        <label for="date">Date:</label><br>
-        <input type="date" id="date">
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" placeholder="Email">
-        <label for="address">Address:</label><br>
-        <textarea id="address" placeholder="Address"></textarea>
-        <Button id="submit">Add</Button>
+
+        <label class="form-lb" for="date">Date:</label><br>
+        <input class="form-input" type="date" id="date">
+
+        <label class="form-lb" for="email">Email:</label><br>
+        <input class="form-input" type="email" id="email" placeholder="Email">
+
+        <label class="form-lb" for="address">Address:</label><br>
+        <textarea class="form-textarea" id="address" placeholder="Address"></textarea>
+
+        <Button class="form-button" id="submit">Add</Button>
     </form>
 
-    <div class="section">
-        <h1>List of students</h1>
+    <div class="table-section">
+        <h1 class="table-header">List of students</h1>
         <table id="table">
-            <tr>
-                <th>F. Name</th>
-                <th>L. Name</th>
-                <th>Age</th>
-                <th>Gender</th>
-                <th>Birth date</th>
-                <th>Email</th>
-                <th>Address</th>
-                <th>Actions</th>
-            </tr>
-            <!-- <tr>
-                <td>Mehdi</td>
-                <td>El Bettioui</td>
-                <td>21</td>
-                <td>Male</td>
-                <td>04/06/2002</td>
-                <td>mehdi.elbettioui1@gmail.com</td>
-                <td>Salé</td>
-                <td>
-                    <i id="edit-icon" class="fa-solid fa-pen-to-square"></i>
-                    <i id="delete-icon" class="fa-solid fa-trash"></i>
-                </td>
-            </tr> -->
-            
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Birth date</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
         </table>
     </div>
 
-
+    <div class="modal-container">
+        
+        <div class="popup" id="popup">
+            <div class="modal-content">
+                <h2>Edit Student</h2>
+            <div>
+                <div class="row">
+                    <div class="column">
+                        <label class="edit-lb" for="edit-first-name">First Name:</label>
+                        <input class="edit-input" type="text" id="edit-first-name">
+                    </div>
+                    <div class="column">
+                        <label class="edit-lb" for="edit-last-name">Last Name:</label>
+                        <input class="edit-input" type="text" id="edit-last-name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <label class="edit-lb" for="edit-age">Age:</label>
+                        <input class="edit-input" type="number" id="edit-age">
+                    </div>
+                    <div class="column">
+                        <label class="edit-lb" for="edit-gender">Gender:</label>
+                        <select class="modal-select" id="edit-gender">
+                            <option value="Male" selected>Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <label class="edit-lb" for="edit-date">Date:</label>
+                        <input class="edit-input" type="date" id="edit-date">
+                    </div>
+                    <div class="column">
+                        <label class="edit-lb" for="edit-email">Email:</label>
+                        <input class="edit-input" type="email" id="edit-email">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <label class="edit-lb" for="address">Address:</label>
+                        <textarea class="modal-textarea" id="edit-address"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                        <button onclick="closePopup()" class="modal-btn">Cancel</button>
+                        <button onclick="saveEdit()" class="modal-btn">Save</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
 
     <script src="assets/script.js"></script>
 </body>

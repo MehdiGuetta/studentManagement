@@ -10,56 +10,56 @@ body{
     background-color: #eee;
 }
 
-form{
+.my-form{
     width: 26%;
     float: left;
     height: auto;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
     background-color: #fff;
     margin: 1%;
 }
 
-.section{
+.table-section{
     width: 71%;
     float: right;
     height: 500px auto;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
     background-color: #fff;
     margin: 1% 1% 1% 0;
 }
 
-form legend,.section h1{
+.form-legend, .table-header{
     color: #000;
     font-size: 25px;
     margin: 20px 0 20px 20px;
     font-weight: 700;
 }
 
-form label{
+.form-lb{
     margin-left: 20px;
     margin-top: 20px;
 }
-form input{
+.form-input{
     margin-left: 20px;
     width: 90%;
     border: 1px solid #787878;
-    outline: none;
+    outline: none ;
     border-radius: 3px;
     padding: 10px;
     margin-bottom: 15px;
 }
-form span{
+.form-span{
     margin-left: 20px;
     color: red;
     margin-bottom: 15px;
     display: block;
 }
 
-form select{
+.form-select{
     margin-left: 20px;
     width: 90%;
     border: 1px solid #787878;
@@ -69,7 +69,7 @@ form select{
     margin-bottom: 15px;
 }
 
-form textarea{
+.form-textarea{
     margin-left: 20px;
     width: 90%;
     border: 1px solid #787878;
@@ -79,16 +79,18 @@ form textarea{
     margin-bottom: 50px;
 }
 
-form button{
+.form-button{
     margin-left: 20px;
     width: 90%;
-    border: 1px solid #787878;
+    border: none;
     outline: none;
-    border-radius: 3px;
+    border-radius: 5px;
     padding: 10px;
     margin-bottom: 15px;
     cursor: pointer;
     font-size: 20px;
+    background-color: #0d6eff;
+    color: #fff;
 }
 
 table{
@@ -111,9 +113,119 @@ th, td{
 td i{
     padding: 10px;
     cursor: pointer;
-    color: #07ca07;
+    color: #07a207;
     font-size: 20px;
 }
 td i:nth-child(2){
     color: red;
+}
+.modal-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.edit-icon{
+    font-size: 50px;
+    cursor: pointer;
+    color: white;
+}
+.popup{
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: opacity 073s ease; 
+}
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 700px;
+    margin: 7% auto;
+    width: 700px;
+    border-radius: 6px;
+}
+.open-popup{
+    display: block;
+    opacity: 1; 
+}
+.row{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.edit-lb{
+    margin-top: 15px;
+    text-wrap: nowrap;
+    display: flex;
+    align-self: flex-start;
+    font-size: 18px;
+    font-weight: 500;
+}
+.edit-input{
+    width: 300px;
+    height: 40px;
+    border: 1px solid #787878;
+    outline: none ;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.modal-select{
+    width: 300px;
+    height: 40px;
+    border: 1px solid #787878;
+    outline: none;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2px;
+}
+.modal-textarea{
+    width: 620px;
+    height: 80px;
+    border: 1px solid #787878;
+    outline: none;
+    border-radius: 3px;
+    padding: 10px;
+}
+.modal-btn{
+    margin-top: 20px;
+    width: 120px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #787878;
+    color: #fff;
+    font-weight: 400;
+}
+.modal-btn:nth-child(2){
+    background-color: #07a207;
+    margin-left: 20px;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 700px;
+    border-radius: 10px;
 }

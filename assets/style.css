@@ -229,3 +229,16 @@ td i:nth-child(2){
     width: 700px;
     border-radius: 10px;
 }
+
+@media only screen and (max-width: 768px){
+    body{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .my-form, .table-section{
+        width: 100%;
+        margin: 1%;
+    }
+}
